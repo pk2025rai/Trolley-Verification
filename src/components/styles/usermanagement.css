@@ -1,0 +1,143 @@
+.users-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 32px 40px;
+ background: #e9ebff;
+  box-sizing: border-box;
+}
+
+/* Top controls */
+.users-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7ff;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-icon {
+  margin-right: 8px;
+}
+
+.users-controls select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5ff;
+  background: #fff;
+}
+
+.add-user-btn {
+  padding: 12px 18px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Table */
+.users-table {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f5f6fb;
+}
+
+th, td {
+  padding: 14px 18px;
+  font-size: 14px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8f9fd;
+}
+
+/* Status */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.status.active .dot {
+  background: #22c55e;
+}
+
+.status.inactive .dot {
+  background: #ef4444;
+}
+
+/* Actions */
+.action-icons {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.pagination span {
+  cursor: pointer;
+}
+
+.pagination .active {
+  background: #4f46e5;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 50%;
+}
+
+/* Help button */
+.help-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4);
+}

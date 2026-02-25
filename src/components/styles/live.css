@@ -1,0 +1,293 @@
+/* Container */
+.stream-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffffff, #f5f5f5); /* Light cyan to soft gray */
+  border-radius: 10px;
+}
+
+
+/* Heading */
+.stream-heading {
+  font-size: 24px;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+/* Main Controls */
+.main-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.main-controls button {
+  background-color: #f82424;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 16px;
+}
+
+.main-controls button:nth-child(2) {
+  background-color: #ff1616;
+  color: rgb(255, 255, 255);
+}
+
+.main-controls button:nth-child(2):hover {
+  background-color: #ff0000;
+}
+
+.main-controls button:nth-child(3) {
+  background-color: #ff0c0c;
+}
+
+.main-controls button:nth-child(3):hover {
+  background-color: #f90000;
+}
+
+.main-controls button:hover {
+  background-color: #ff1111;
+}
+
+/* Camera Wrapper */
+.camera-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns total */
+  grid-auto-rows: auto;
+  gap: 12px;
+  width: 70%;
+  transform: translateX(-200px);
+  /* height: 100px; */
+  margin: auto;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Camera Box */
+.camera-box {
+  background: #fff;
+  /* height: 200px; */
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  padding: 6px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Video Frame */
+.video-frame {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-frame:hover {
+  transform: scale(1.1);
+}
+
+.camera-box:hover {
+  transform: none !important;
+}
+
+/* Video Stream */
+.video-stream {
+  width: 100%;
+  height: 200px;
+  background: black;
+}
+
+/* Camera Details */
+.camera-details {
+  margin-top: 8px;
+}
+
+.camera-label {
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+}
+
+.time-stamp {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Zoom Buttons */
+.zoom-buttons {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.zoom-buttons button {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background 0.3s ease;
+}
+
+.zoom-buttons button:hover {
+  background-color: #d39e00;
+}
+
+/* Action Buttons */
+.action-buttons {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.start-recording,
+.stop-recording {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.stop-recording {
+  background-color: #dc3545;
+}
+
+.start-recording:hover {
+  background-color: #ff1313;
+}
+
+.stop-recording:hover {
+  background-color: #c82333;
+}
+
+/* Recording History */
+.recording-history {
+  display: block;
+  margin: 20px auto;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s ease;
+}
+
+.recording-history:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .camera-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .camera-box:nth-child(5) {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .camera-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .camera-box:nth-child(5) {
+    grid-column: span 1;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+.threshold-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 180px;
+  margin-right: 50px;
+  width: 300px;
+  height: 40vh;
+  /* background: linear-gradient(135deg, #ffffff, #f1f3f5); Light blue to soft gray */
+  padding: 20px;
+  /* box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); */
+  overflow-y: auto;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+
+.threshold-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.threshold-control {
+  margin-bottom: 24px;
+}
+
+.camera-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.threshold-bar {
+  position: relative;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.threshold-fill {
+  height: 100%;
+  background-color: #0fa2ac;
+  border-radius: 5px 0 0 5px;
+}
+
+.threshold-knob {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  background-color: #54cce4;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  cursor: grab;
+}
+
+.threshold-percentage {
+  color: #2563eb; /* Tailwind's text-blue-600 */
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 8px;
+}

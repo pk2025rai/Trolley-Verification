@@ -1,0 +1,117 @@
+/* ===== PAGE ===== */
+.analytics-page {
+  padding: 10px;
+  background: #f8fafc;
+  height: calc(100vh - 60px); /* navbar height */
+  overflow: hidden; /* NO SCROLL */
+  width: 100%;
+}
+
+/* ===== FILTERS ===== */
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.filters select,
+.filters button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #c7d2fe;
+  background: white;
+  font-size: 12px;
+  height: 32px;
+}
+
+/* ===== STATS ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #e0e7ff;
+}
+
+.stat-card h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #1e1b4b;
+}
+
+.stat-card p {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+/* ===== CHART GRIDS ===== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
+}
+
+/* ===== CHART CARD ===== */
+.chart-card {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #e0e7ff;
+}
+.chart-card-pie {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #e0e7ff;
+  height: 100px;
+}
+
+.chart-card h4 {
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #4338ca;
+}
+
+/* ===== FORCE CHART HEIGHTS ===== */
+.chart-card .recharts-responsive-container {
+  height: 170px !important;
+}
+.chart-card-pie .recharts-responsive-container{
+    height: 170px !important;
+}
+/* Smaller charts on top row */
+.charts-grid .chart-card .recharts-responsive-container {
+  height: 160px !important;
+}
+
+/* ===== HEATMAP ===== */
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.heat-cell {
+  height: 16px;
+  border-radius: 4px;
+}
+
+.level-0 { background: #e0e7ff; }
+.level-1 { background: #c7d2fe; }
+.level-2 { background: #818cf8; }
+.level-3 { background: #4f46e5; }
