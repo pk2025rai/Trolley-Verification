@@ -1,6 +1,6 @@
 .config-page {
   width: 100%;
-  min-height: 100vh;        /* 🔥 IMPORTANT */
+  min-height: 100vh;       
   /* padding: 40px ; */
   /* background: radial-gradient(circle at top, #f3f4ff, #e9ebff); */
   box-sizing: border-box;

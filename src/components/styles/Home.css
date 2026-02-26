@@ -1,4 +1,4 @@
-/* GLOBAL FIX */
+
 *,
 *::before,
 *::after {
@@ -26,15 +26,15 @@
   min-width: 0;
 }
 
-/* ===== TOP ROW GRID ===== */
+
 .top-row {
   display: grid;
-  grid-template-columns: 260px 1fr 1.3fr; /* 🔥 LIDAR fixed, others flexible */
+  grid-template-columns: 260px 1fr 1.3fr; 
   gap: 12px;
   width: 100%;
 }
 
-/* ===== LIDAR ===== */
+
 .lidar-bars {
   display: flex;
   gap: 12px;
@@ -57,7 +57,7 @@
 .lidar.online { background: #ff9800; }
 .lidar.offline { background: #4caf50; }
 
-/* ===== BUCKET ===== */
+
 .bucket {
   padding: 8px 12px;
   border-radius: 8px;
@@ -70,7 +70,7 @@
 .yellow { background: #fbc02d; color: #333; }
 .red { background: #e53935; }
 
-/* ===== DONUT ===== */
+
 .donut-card {
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@
 .blue { background: #4a90ff; }
 .orange { background: #ff7a00; }
 
-/* ===== STATS ===== */
+
 .stats-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -117,7 +117,7 @@
   font-size: 13px;
 }
 
-/* ===== TABLE ===== */
+
 .table-card {
   flex: 1;
   overflow: hidden;

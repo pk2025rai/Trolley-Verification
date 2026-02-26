@@ -5,10 +5,8 @@ const Home = () => {
   return (
     <div className="home">
 
-      {/* ===== TOP ROW ===== */}
       <div className="top-row">
 
-        {/* LIDAR */}
         <div className="card lidar-card">
           <h4>LIDAR Status</h4>
           <div className="lidar-bars">
@@ -37,7 +35,7 @@ const Home = () => {
 
       </div>
 
-      {/* ===== STATS ===== */}
+      
       <div className="stats-row">
         <div className="card stat-card">
           <h2>42</h2>
@@ -50,7 +48,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* ===== TABLE ===== */}
       <div className="card table-card">
         <h3>Trolley List Analytics</h3>
 
