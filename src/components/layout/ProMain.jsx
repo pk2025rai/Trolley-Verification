@@ -14,7 +14,7 @@ const ProMain = () => {
     const defaultEmail = "admin@example.com";
     const defaultPassword = "admin123";
     if (email == defaultEmail && password == defaultPassword) {
-      navigate("/dashboard");
+      navigate("/dashboard/home");
     } else {
       setError("Invalid email or password");
     }

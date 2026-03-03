@@ -4,52 +4,88 @@ import "../styles/Home.css";
 const Home = () => {
   return (
     <div className="home">
-
-      <div className="top-row">
-
+      <div className="dashboard-grid">
         <div className="card lidar-card">
           <h4>LIDAR Status</h4>
-          <div className="lidar-bars">
-            <div className="lidar online">Online</div>
-            <div className="lidar offline">Offline</div>
+
+          <div className="lidar-chart">
+            <div className="bar-container">
+              <div className="bar online-bar" style={{ height: "80px" }}>
+                <span className="value">20</span>
+              </div>
+              <p>Online</p>
+            </div>
+
+            <div className="bar-container">
+              <div className="bar offline-bar" style={{ height: "45px" }}>
+                <span className="value">9</span>
+              </div>
+              <p>Offline</p>
+            </div>
           </div>
         </div>
 
         {/* BUCKET */}
         <div className="card bucket-card">
-          <h4>Real Time Bucket Levels</h4>
-          <div className="bucket green">Bucket 1 &nbsp; 75% Full</div>
-          <div className="bucket yellow">Bucket 2 &nbsp; Near Limit</div>
-          <div className="bucket red">Bucket 3 &nbsp; Non-Compliant</div>
-        </div>
-
-        {/* DONUT */}
-        <div className="card donut-card">
-          <h4>Daily Performance Overview</h4>
-          <div className="donut-chart" />
-          <div className="legend">
-            <span><i className="blue" /> Completed Cycle</span>
-            <span><i className="orange" /> Non-compliance</span>
+          <div className="bucket-row">
+            <span className="bucket-label">Bucket 1</span>
+            <div className="bucket-bar green">
+              <span>75% Full</span>
+            </div>
           </div>
+
+          <div className="bucket-row">
+            <span className="bucket-label">Bucket 2</span>
+            <div className="bucket-bar yellow">
+              <span>Near Limit</span>
+            </div>
+          </div>
+
+          <div className="bucket-row">
+            <span className="bucket-label">Bucket 3</span>
+            <div className="bucket-bar red">
+              <span>Non-Compliant</span>
+            </div>
+          </div>
+
+          <h4 className="bucket-title">Real Time Bucket Levels</h4>
         </div>
 
-      </div>
+        <div className="card donut-card">
+          <div className="legend top-legend">
+            <span>
+              <i className="blue" /> Completed Cycle
+            </span>
+            <span>
+              <i className="orange" /> Non-compliance
+            </span>
+          </div>
 
-      
-      <div className="stats-row">
-        <div className="card stat-card">
-          <h2>42</h2>
+          <div className="donut-wrapper">
+            <div className="donut-chart"></div>
+          </div>
+
+          <h4 className="donut-title">Daily Performance Overview</h4>
+        </div>
+        <div className="card stat-card small-stat cycle-stat">
+          <div className="stat-top">
+            <div className="stat-icon pie-icon"></div>
+            <h2>42</h2>
+          </div>
           <p>Cycle Completed</p>
         </div>
 
-        <div className="card stat-card">
-          <h2>5</h2>
+        <div className="card stat-card small-stat issue-stat">
+          <div className="stat-top">
+            <div className="stat-icon issue-icon"></div>
+            <h2>5</h2>
+          </div>
           <p>Issue Observed</p>
         </div>
       </div>
 
       <div className="card table-card">
-        <h3>Trolley List Analytics</h3>
+        <h3 className="table-title">Trolley List Analytics</h3>
 
         <table>
           <thead>
@@ -60,6 +96,7 @@ const Home = () => {
               <th>Last Update</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>BUC12347</td>
@@ -81,8 +118,24 @@ const Home = () => {
             </tr>
           </tbody>
         </table>
-      </div>
 
+        {/* Pagination */}
+        <div className="pagination">
+          <span>{"<"}</span>
+          <span>{"<"}</span>
+
+          <span className="active">1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+
+          <span>{">"}</span>
+          <span>{">"}</span>
+        </div>
+      </div>
     </div>
   );
 };
